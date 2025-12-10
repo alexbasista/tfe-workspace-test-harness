@@ -3,7 +3,9 @@ data "external" "test_data_source" {
 }
 
 resource "random_id" "id" {
-  byte_length = 256
+  count = var.random_id_resource_count
+
+  byte_length = var.random_id_byte_length
 
   keepers = {
     uuid = uuid()
