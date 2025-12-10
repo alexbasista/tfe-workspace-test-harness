@@ -1,2 +1,3 @@
-# tfe-workspace-harness
-Testing workloads on Terraform Enterprise
+# tfe-workspace-test-harness
+
+Simulate workload within Terraform Cloud or Terraform Enterprise workspace(s).

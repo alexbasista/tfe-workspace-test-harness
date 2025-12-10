@@ -1,22 +1,11 @@
-variable "pet_count" {
-  type        = number
-  description = "Count of random_pet."
-  default     = 100
+data "external" "test_data_source" {
+  program = ["/bin/sh", "-c", "sleep 30 && echo {}"]
 }
 
-variable "length" {
-  type        = number
-  description = "Length of random_pet."
-  default     = 100
-}
-
-resource "random_pet" "main" {
-  count = var.pet_count
-
-  length    = var.length
-  separator = "-"
+resource "random_id" "id" {
+  byte_length = 256
 
   keepers = {
-    always = timestamp()
+    uuid = uuid()
   }
 }
