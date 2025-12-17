@@ -1,5 +1,5 @@
 data "external" "test_data_source" {
-  program = ["/bin/sh", "-c", "sleep 120 && echo {}"]
+  program = ["/bin/sh", "-c", "sleep 180 && echo {}"]
 }
 
 resource "random_id" "one" {
