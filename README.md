@@ -8,7 +8,7 @@ Simulate workload within Terraform Cloud or Terraform Enterprise workspace(s).
 
 2. **Create a TFE Project dedicated to this scale test**
    
-   If using a custom agent pool (recommended), set the Project-level **execution mode** to `Agent (custom)` and select applicable agent pool.
+   If using a custom agent pool (recommended), set the Project-level **execution mode** to `Agent (custom)` and select the applicable agent pool.
 
 3. **Create your desired number of Workspaces**
    
@@ -38,9 +38,9 @@ Simulate workload within Terraform Cloud or Terraform Enterprise workspace(s).
    blast_api_driven_runs.sh [options] <path_to_content_directory> [workspace_name_prefix_filter]
 
    Required (via env or flags):
-   TFE_TOKEN       or --token/-t
-   TFE_HOSTNAME    or --hostname/-H   (e.g. tfe.example.com or https://tfe.example.com)
-   TFE_ORG         or --org/-o
+     TFE_TOKEN       or --token/-t
+     TFE_HOSTNAME    or --hostname/-H   (e.g. tfe.example.com or https://tfe.example.com)
+     TFE_ORG         or --org/-o
    ```
 
    Example:
